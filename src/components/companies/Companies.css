@@ -1,0 +1,12 @@
+.companies-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .company-image {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
