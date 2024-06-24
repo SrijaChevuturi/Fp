@@ -16,6 +16,7 @@ function CustomNavbar() {
             <NavDropdown.Item as={NavLink} to="/placementData">Placement Data</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link as={NavLink} to="/home">Higher Studies</Nav.Link>
+          <Nav.Link as={NavLink} to="/home">Ed Cell</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
