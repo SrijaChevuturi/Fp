@@ -1,31 +1,25 @@
 import React from 'react';
-import './Navbar.css';
 import { NavLink } from 'react-router-dom';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import './Navbar.css';
 
-function Navbar() {
+function CustomNavbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light custom-navbar">
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav mx-auto">
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/" exact>Home</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/companies">Companies</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/placementData">Placements</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/home">Higher Studies</NavLink>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <Navbar expand="lg" className="custom-navbar">
+      <Navbar.Toggle aria-controls="navbarNav" />
+      <Navbar.Collapse id="navbarNav">
+        <Nav className="mx-auto">
+          <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+          <Nav.Link as={NavLink} to="/companies">Companies</Nav.Link>
+          <NavDropdown title="Placements" id="navbarDropdown">
+            <NavDropdown.Item as={NavLink} to="/placementForm">Placement Form</NavDropdown.Item>
+            <NavDropdown.Item as={NavLink} to="/placementData">Placement Data</NavDropdown.Item>
+          </NavDropdown>
+          <Nav.Link as={NavLink} to="/home">Higher Studies</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }
 
-export default Navbar;
+export default CustomNavbar;
