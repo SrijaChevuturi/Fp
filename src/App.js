@@ -5,6 +5,7 @@ import Home from './components/home/Home';
 import Companies from './components/companies/Companies';
 import Report from './components/placementData/data';
 import Form from './components/placementForm/form';
+import MedainPlacements from './components/medainPlacements/MedainPlacements';
 
 
 function App() {
@@ -33,6 +34,10 @@ function App() {
           {
             path:'placementForm',
             element:<Form/>
+          },
+          {
+            path:'medainPlacemnts',
+            element:<MedainPlacements/>
           },
         ]
 
