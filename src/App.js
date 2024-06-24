@@ -3,6 +3,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import RootLayout from './components/RootLayout';
 import Home from './components/home/Home';
 import Companies from './components/companies/Companies';
+import Report from './components/placementData/data';
+import Form from './components/placementForm/form';
 
 function App() {
 
@@ -22,6 +24,14 @@ function App() {
           {
             path:'companies',
             element:<Companies/>
+          },
+          {
+            path:'placementData',
+            element:<Report/>
+          },
+          {
+            path:'placementForm',
+            element:<Form/>
           },
         ]
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css';
 import { NavLink } from 'react-router-dom';
 
@@ -18,7 +17,7 @@ function Navbar() {
             <NavLink className="nav-link" to="/companies">Companies</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/home">Placements</NavLink>
+            <NavLink className="nav-link" to="/placementData">Placements</NavLink>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/home">Higher Studies</NavLink>

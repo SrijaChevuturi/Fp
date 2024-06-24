@@ -104,6 +104,10 @@ Maintain global standards in education, training and services
             <br />
             <br />
         </div>
+        <div>
+            <a href="/placementForm">Placement Form</a>
+            <a href="/placementData">Placement Data</a>
+        </div>
         <div className="container">
             <div className="circles">
                 <div className="circle">
