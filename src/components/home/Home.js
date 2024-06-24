@@ -1,6 +1,7 @@
 import CountUp from "react-countup";
 import React, { useState } from 'react';
 import Slider from 'react-slick';
+import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Home.css';
@@ -79,8 +80,8 @@ Today, with this philosophy, Vignana Jyothi has created an edifice that is stron
                             
                             <p className="card-text text-dark ">
                             To produce technically competent and socially responsible engineers, managers and entrepreneurs, who will be future ready.
-To involve students and faculty in innovative research projects linked with industry, academic and research institutions in India and abroad.
-To use modern pedagogy for improving the teaching-learning process.</p>
+                    To involve students and faculty in innovative research projects linked with industry, academic and research institutions in India and abroad.
+                    To use modern pedagogy for improving the teaching-learning process.</p>
                         </div>
                     </div>
                 </div>
@@ -104,9 +105,19 @@ Maintain global standards in education, training and services
             <br />
             <br />
         </div>
-        <div>
-            <a href="/placementForm">Placement Form</a>
-            <a href="/placementData">Placement Data</a>
+        <div className="container d-flex align-items-center bg-light">
+        <div className="row w-100">
+            <div className="col-12 col-md-6 d-flex justify-content-center">
+            <img src="https://annamacharyagroup.org/wp-content/uploads/2018/05/Tip-for-campus-placements-2-05-2018.jpg" alt="Placements" className="img-fluid"/>
+            </div>
+            <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+            <h1>Placement Information</h1>
+            <div className="mt-4">
+                <Link to="/placementForm" className="btn btn-primary me-2">Placement Form</Link>
+                <Link to="/placementData" className="btn btn-secondary">Placement Data</Link>
+            </div>
+            </div>
+        </div>
         </div>
         <div className="container">
             <div className="circles">
