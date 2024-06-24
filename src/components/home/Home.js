@@ -105,7 +105,7 @@ Maintain global standards in education, training and services
             <br />
             <br />
         </div>
-        <div className="container d-flex align-items-center bg-light">
+         <div className="container d-flex align-items-center bg-light">
         <div className="row w-100">
             <div className="col-12 col-md-6 d-flex justify-content-center">
             <img src="https://annamacharyagroup.org/wp-content/uploads/2018/05/Tip-for-campus-placements-2-05-2018.jpg" alt="Placements" className="img-fluid"/>
@@ -114,11 +114,12 @@ Maintain global standards in education, training and services
             <h1>Placement Information</h1>
             <div className="mt-4">
                 <Link to="/placementForm" className="btn btn-primary me-2">Placement Form</Link>
-                <Link to="/placementData" className="btn btn-secondary">Placement Data</Link>
+                <Link to="/placementData" className="btn btn-secondary me-2">Placement Data</Link>
+                <Link to="/medainPlacemnts" className="btn btn-primary">More Info</Link>
             </div>
             </div>
         </div>
-        </div>
+        </div> 
         <div className="container">
             <div className="circles">
                 <div className="circle">
