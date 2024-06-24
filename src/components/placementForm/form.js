@@ -3,13 +3,16 @@ import { useForm } from 'react-hook-form';
 
 function Form() {
   const formSubmission = (details) => {
-    console.log(details);
-    localStorage.setItem('formData', JSON.stringify(details));
+    let submissions = JSON.parse(localStorage.getItem('formData')) || [];
+    submissions.push(details);
+    localStorage.setItem('formData', JSON.stringify(submissions));
+    reset();
   };
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors },reset } = useForm();
   return (
-    <div className="container d-flex justify-content-center align-items-center min-vh-100 bg-light">
-      <form onSubmit={handleSubmit(formSubmission)} className="w-100 p-4 bg-light">
+    <div className="container d-flex mt-4 justify-content-center align-items-center min-vh-100 bg-light">
+      <form onSubmit={handleSubmit(formSubmission)} className="w-100 p-4 bg-white shadow rounded">
+        <h2 className="mb-4">Placement Form</h2>
         <div className="row">
           <div className="mb-3 col-12 col-md-6">
             <label htmlFor="rollno" className="form-label">Roll No</label>
@@ -84,7 +87,7 @@ function Form() {
           <div className="mb-3 col-12 col-md-6">
             <label htmlFor="cgpa" className="form-label">CGPA</label>
             <input type="number" id="cgpa" name="cgpa" className="form-control"
-              {...register("cgpa", { required: true })} />
+              step="0.01" {...register("cgpa", { required: true })} />
             {errors.cgpa?.type === "required" && <div className="alert alert-warning mt-1">CGPA is required</div>}
           </div>
 
@@ -111,13 +114,15 @@ function Form() {
 
           <div className="mb-3 col-12 col-md-6">
             <label className="form-label">On-Campus/Off-Campus</label>
-            <div className="form-check">
-              <input type="radio" id="onCampus" value="onCampus" {...register("campus", { required: true })} className="form-check-input" />
-              <label htmlFor="onCampus" className="form-check-label">On-Campus</label>
-            </div>
-            <div className="form-check">
-              <input type="radio" id="offCampus" value="offCampus" {...register("campus", { required: true })} className="form-check-input" />
-              <label htmlFor="offCampus" className="form-check-label">Off-Campus</label>
+            <div className="d-flex justify-content-center">
+              <div className="form-check">
+                <input type="radio" id="onCampus" value="onCampus" {...register("campus", { required: true })} className="form-check-input" />
+                <label htmlFor="onCampus" className="form-check-label">On-Campus</label>
+              </div>
+              <div className="form-check">
+                <input type="radio" id="offCampus" value="offCampus" {...register("campus", { required: true })} className="form-check-input" />
+                <label htmlFor="offCampus" className="form-check-label">Off-Campus</label>
+              </div>
             </div>
             {errors.campus?.type === "required" && <div className="alert alert-warning mt-1">Please select an option</div>}
           </div>
@@ -133,14 +138,12 @@ function Form() {
             </select>
             {errors.status?.type === "required" && <div className="alert alert-warning mt-1">Status is required</div>}
           </div>
-
           <div className="mb-3 col-12 col-md-6">
-            <label htmlFor="experience" className="form-label">Experience</label>
-            <textarea id="experience" name="experience" className="form-control"
-              {...register("experience", { required: true })} />
-            {errors.experience?.type === "required" && <div className="alert alert-warning mt-1">Experience is required</div>}
+            <label htmlFor="package" className="form-label">Package (in LPA)</label>
+            <input type="number" id="package" name="package" className="form-control"
+              step="0.01" {...register("package", { required: true })} />
+            {errors.package?.type === "required" && <div className="alert alert-warning mt-1">Package is required</div>}
           </div>
-
           <div className="col-12">
             <button type="submit" className="btn btn-primary w-100">Submit</button>
           </div>
@@ -151,12 +154,3 @@ function Form() {
 }
 
 export default Form;
-
-
-{/* <div className="mb-3 col-12 col-md-6">
-            <label htmlFor="offerletter" className="form-label">Offer Letter</label>
-            <input type="file" id="offerletter" name="offerletter" className="form-control"
-              {...register("offerletter", { required: true })} />
-            {errors.offerletter?.type === "required" && <div className="alert alert-warning mt-1">Offer Letter is required</div>}
-    </div>
-*/}

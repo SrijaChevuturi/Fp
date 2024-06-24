@@ -8,7 +8,7 @@ function Report() {
   useEffect(()=>{
         const details=localStorage.getItem('formData');
         if (details) {
-            setData([JSON.parse(details)]);
+            setData(JSON.parse(details));
           }
   },[])
 
