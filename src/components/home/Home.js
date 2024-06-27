@@ -115,7 +115,7 @@ Maintain global standards in education, training and services
             <div className="mt-4">
                 <Link to="/placementForm" className="btn btn-primary me-2">Placement Form</Link>
                 <Link to="/placementData" className="btn btn-secondary me-2">Placement Data</Link>
-                <Link to="/medainPlacemnts" className="btn btn-primary">More Info</Link>
+                <Link to="/medainPlacemnts" className="btn btn-primary">Reports</Link>
             </div>
             </div>
         </div>

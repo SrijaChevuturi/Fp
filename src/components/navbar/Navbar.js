@@ -14,7 +14,7 @@ function CustomNavbar() {
           <NavDropdown title="Placements" id="navbarDropdown">
             <NavDropdown.Item as={NavLink} to="/placementForm">Placement Form</NavDropdown.Item>
             <NavDropdown.Item as={NavLink} to="/placementData">Placement Data</NavDropdown.Item>
-            <NavDropdown.Item as={NavLink} to="/medainPlacemnts">More Info</NavDropdown.Item>
+            <NavDropdown.Item as={NavLink} to="/medainPlacemnts">Reports</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link as={NavLink} to="https://postgraduation-frontend.vercel.app/" target="_self" rel="noopener noreferrer">Higher Studies</Nav.Link>
           <Nav.Link as={NavLink} to="https://edcell-fp-frontend.vercel.app/" target="_self" rel="noopener noreferrer">Ed Cell</Nav.Link>

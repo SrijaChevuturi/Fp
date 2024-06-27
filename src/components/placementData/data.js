@@ -12,7 +12,6 @@ function Report() {
           }
   },[])
 
-
   const handleRowClick = (student) => {
     setSelectedStudent(student);
   };
@@ -46,25 +45,31 @@ function Report() {
       {selectedStudent && (
         <div className="modalBackdrop">
           <div className="modalContent">
-            <span className="close" onClick={handleCloseDetails}>&times;</span>
-            <br />
-            <br />
-            <h2>Student Details</h2>
-            <p><strong>Name:</strong> {selectedStudent.firstname} {selectedStudent.lastname}</p>
-            <p><strong>Roll No:</strong> {selectedStudent.rollno}</p>
-            <p><strong>Branch:</strong> {selectedStudent.branch.toUpperCase()}</p>
-            <p><strong>Contact No1:</strong> {selectedStudent.mobilenumber1}</p>
-            <p><strong>Contact No2:</strong> {selectedStudent.mobilenumber2}</p>
-            <p><strong>E-Mail(Personal):</strong> {selectedStudent.personalEmail}</p>
-            <p><strong>E-Mail(College):</strong> {selectedStudent.collegeEmail}</p>
-            <p><strong>CGPA:</strong> {selectedStudent.cgpa}</p>
-            <p><strong>Company:</strong> {selectedStudent.companyPlaced}</p>
-            <p><strong>Package (LPA):</strong> {selectedStudent.package}</p>
-            <p><strong>Year Joined:</strong> {selectedStudent.yearJoined}</p>
-            <p><strong>Year Placed:</strong> {selectedStudent.yearPlaced}</p>
-            <p><strong>On/Off Campus:</strong> {selectedStudent.campus}</p>
-            <p><strong>Status:</strong> {selectedStudent.status}</p>
-            <p><strong>Company Type:</strong> {selectedStudent.companyType}</p>
+            <div className="close" onClick={handleCloseDetails}>&times;</div>
+            <div>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <h2>Student Details</h2>
+              <p><strong>Name:</strong> {selectedStudent.firstname} {selectedStudent.lastname}</p>
+              <p><strong>Roll No:</strong> {selectedStudent.rollno}</p>
+              <p><strong>Branch:</strong> {selectedStudent.branch.toUpperCase()}</p>
+              <p><strong>Contact No1:</strong> {selectedStudent.mobilenumber1}</p>
+              <p><strong>Contact No2:</strong> {selectedStudent.mobilenumber2}</p>
+              <p><strong>E-Mail(Personal):</strong> {selectedStudent.personalEmail}</p>
+              <p><strong>E-Mail(College):</strong> {selectedStudent.collegeEmail}</p>
+              <p><strong>CGPA:</strong> {selectedStudent.cgpa}</p>
+              <p><strong>Company:</strong> {selectedStudent.companyPlaced}</p>
+              <p><strong>Package (LPA):</strong> {selectedStudent.package}</p>
+              <p><strong>Year Joined:</strong> {selectedStudent.yearJoined}</p>
+              <p><strong>Year Placed:</strong> {selectedStudent.yearPlaced}</p>
+              <p><strong>On/Off Campus:</strong> {selectedStudent.campus}</p>
+              <p><strong>Status:</strong> {selectedStudent.status}</p>
+              <p><strong>Company Type:</strong> {selectedStudent.companyType}</p>
+            </div>
           </div>
         </div>
       )}
