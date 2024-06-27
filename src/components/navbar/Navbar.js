@@ -10,6 +10,7 @@ function CustomNavbar() {
       <Navbar.Collapse id="navbarNav">
         <Nav className="mx-auto">
           <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+          <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
           <Nav.Link as={NavLink} to="/companies">Companies</Nav.Link>
           <NavDropdown title="Placements" id="navbarDropdown">
             <NavDropdown.Item as={NavLink} to="/placementForm">Placement Form</NavDropdown.Item>

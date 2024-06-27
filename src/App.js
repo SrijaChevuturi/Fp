@@ -6,8 +6,7 @@ import Companies from './components/companies/Companies';
 import Report from './components/placementData/data';
 import Form from './components/placementForm/form';
 import MedainPlacements from './components/medainPlacements/MedainPlacements';
-// import Register from './components/register/Register';
-// import Login from './components/login/Login';
+import Login from './components/login/Login';
 
 
 function App() {
@@ -41,14 +40,9 @@ function App() {
             path:'medainPlacemnts',
             element:<MedainPlacements/>
           },
-          // {
-          //   path:'register',
-          //   element:<Register/>
-          // },
-          // {
-          //   path:'login',
-          //   element:<Login/>
-          // },
+          {
+            path:'login',
+            element:<Login/>}
         ]
 
       }
