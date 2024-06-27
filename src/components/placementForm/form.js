@@ -1,12 +1,15 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 function Form() {
+  const navigate=useNavigate()
   const formSubmission = (details) => {
     let submissions = JSON.parse(localStorage.getItem('formData')) || [];
     submissions.push(details);
     localStorage.setItem('formData', JSON.stringify(submissions));
     reset();
+    navigate("/placementData");
   };
   const { register, handleSubmit, formState: { errors },reset } = useForm();
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import img1 from "H:/training/fp/frontend/src/components/images/img1.png";
-import img2 from "H:/training/fp/frontend/src/components/images/img2.png";
+import img1 from "../images/img1.png";
+import img2 from "../images/img2.png";
 import './Companies.css'; // Import the CSS file
 
 function Companies() {
