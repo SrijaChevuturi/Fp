@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, NavLink } from 'react-router-dom';
 import './Login.css';
 
-function Login() {
+function Login({ onLogin }) {
   const [formDetails, setFormDetails] = useState({
     email: '',
     password: '',
@@ -19,9 +19,9 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem('email', formDetails.email);
-    localStorage.setItem('password', formDetails.password);
-    navigate('/home');
+    console.log(formDetails);
+    onLogin();
+    navigate('/');
   };
 
   return (
@@ -50,12 +50,6 @@ function Login() {
           Submit
         </button>
       </form>
-      <p className="link mt-3 fs-5">
-        New user?{' '}
-        <NavLink className="login-link" to={'/register'}>
-          Register
-        </NavLink>
-      </p>
     </div>
   );
 }
